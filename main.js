@@ -1,10 +1,13 @@
-function fetchApiData() {
-    fetch("https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1")
-        .then((response) => response.json())
-        .then((data) => {
-            console.log(data)
-            const list = document.querySelector('#prod_list');
+const fetchApiData = () => {
+    const url = "https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1"
 
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+          const list = document.querySelector('#prod_list');
+
+/*
             data.map((item) => {
                 const li = document.createElement('li');
 
@@ -12,7 +15,7 @@ function fetchApiData() {
                 li.innerHTML = item.name;
                 list.appendChild(li);
             })
-
+*/
         })
          
    
